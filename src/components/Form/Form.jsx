@@ -35,7 +35,7 @@ export class Form extends Component {
                 onSubmit={this.onSubmitHandler}>
                 <StyledForm autoComplete="off">
                     <label htmlFor={this.numberInputId}>
-                        Name
+                        <span>Name</span><br/>
                         <Input
                             id={this.nameInputId}
                             type="text"
@@ -44,7 +44,7 @@ export class Form extends Component {
                         <FormError name="name"/>
                     </label>
                     <label htmlFor={this.numberInputId}>
-                        Number
+                        <span>Number</span><br/>
                         <Input
                             id={this.numberInputId}
                             type="tel"
@@ -52,7 +52,7 @@ export class Form extends Component {
                         />
                         <FormError name="number"/>
                     </label>
-                    <button type="submit">Add contact</button>
+                    <button type="submit" style={{ padding: 10 }}>Add contact</button>
                 </StyledForm>
             </Formik>
         )

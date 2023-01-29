@@ -49,32 +49,36 @@ export class App extends Component  {
       <Box m="0 auto">
         {/* ------Add Contacts------- */}
         <h1>My PhoneBook</h1>
-        <Box display="flex" flexDirection="row" justifyContent="center">
-          <Section>
-          <Form onSubmit={this.onSubmitForm} />
-          </Section>
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="center"
+          gridGap={5}>
+            <Section>
+            <Form onSubmit={this.onSubmitForm} />
+            </Section>
         {/* ------My Contacts------- */}
-          <Section title="Contacts">
-            {this.state.contacts.length ? (
-              <Box
+            <Section title="Contacts">
+              {this.state.contacts.length ? (
+                <Box
                   display="flex"
                   flexDirection="column"
-                  gridGap="10px"
-              >
-                {/* ------Filter------- */}
-              <Filter
-                  onChange={this.onChangeFilter}  
-                  value={filter}
-                />
-                {/* ------Contact List------- */}
-                <ContactList
-                  contacts={visibleContacts}
-                  onDelete={this.deleteContact}
-                />
-              </Box>
-            ) : (<p>There are no contacts.</p>
-            )}
-          </Section>
+                  p="15px"
+                >
+                  {/* ------Filter------- */}
+                <Filter
+                    onChange={this.onChangeFilter}  
+                    value={filter}
+                  />
+                  {/* ------Contact List------- */}
+                  <ContactList
+                    contacts={visibleContacts}
+                    onDelete={this.deleteContact}
+                  />
+                </Box>
+              ) : (<p>There are no contacts.</p>
+              )}
+            </Section>
         </Box>
         <GlobalStyle />
       </Box>

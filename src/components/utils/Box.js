@@ -8,6 +8,7 @@ import styled from 'styled-components';
     background,
     border,
     position,
+    grid,
     } from 'styled-system';
 
     export const Box = styled('div')(
@@ -18,4 +19,5 @@ import styled from 'styled-components';
     background,
     border,
     position,
+    grid,
     );
