@@ -1,18 +1,16 @@
 import PropTypes from 'prop-types';
-import { ItemWrap, ItemContact } from './ContatcItem.styled';
+import { ContactWrapper } from './ContatcItem.styled';
 
-export const ContactItem = ({ name, number, id, onClickDelete }) => {
+export const Contact = ({ name, number, id, onClickDelete }) => {
     return (
-        <ItemWrap>
-            <ItemContact>
-                {name}: {number}
-            </ItemContact>
+        <ContactWrapper>
+            {name}: {number}
             <button type="button" onClick={() => onClickDelete(id)}>Delete</button>
-        </ItemWrap>
+        </ContactWrapper>
     );
 };
 
-ContactItem.propTypes = {
+Contact.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     number: PropTypes.string.isRequired,
