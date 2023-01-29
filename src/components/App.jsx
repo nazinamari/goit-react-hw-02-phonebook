@@ -58,7 +58,7 @@ export class App extends Component  {
             <Form onSubmit={this.onSubmitForm} />
             </Section>
         {/* ------My Contacts------- */}
-            <Section title="Find Name">
+            <Section>
               {this.state.contacts.length ? (
                 <Box
                   display="flex"
