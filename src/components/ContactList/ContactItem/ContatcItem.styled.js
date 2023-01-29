@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContactItemStyle = styled.div`
     display: flex;
     justify-content: space-between;
-    /* margin-bottom: 15px; */
+    align-items: center;
 `;
 
 export const ItemInfo = styled.div`
