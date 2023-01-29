@@ -5,6 +5,7 @@ export const ContactItemStyle = styled.div`
     padding: 15px;
     display: flex;
     justify-content: space-between;
+    border-radius: ${p => p.theme.radii.sm };
 `;
 
 export const ItemInfo = styled.div`

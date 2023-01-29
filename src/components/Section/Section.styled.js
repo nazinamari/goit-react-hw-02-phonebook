@@ -6,6 +6,5 @@ text-align: center;
 `;
 
 export const SectionStyled = styled.section`
-display: inline-block;
-padding: 0;
+
 `

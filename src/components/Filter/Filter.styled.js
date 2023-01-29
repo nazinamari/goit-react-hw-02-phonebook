@@ -9,6 +9,7 @@ export const Form = styled.form`
     max-width: 600px;
     color: ${p => p.theme.colors.text };
     background: ${p => p.theme.colors.background };
+    border-radius: ${p => p.theme.radii.sm };
     padding: 15px;
 `;
 
