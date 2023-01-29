@@ -17,5 +17,5 @@ import styled from 'styled-components';
     flexbox,
     background,
     border,
-    position
+    position,
     );

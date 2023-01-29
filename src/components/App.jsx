@@ -5,7 +5,7 @@ import { Section } from './Section/Section';
 import { Form } from './Form/Form';
 import { Filter } from './Filter/Filter';
 import { nanoid } from 'nanoid';
-import { ContactList } from './ContsctList/ContactList';
+import { ContactList } from './ContactList/ContactList';
 
 export class App extends Component  {
 
@@ -47,29 +47,35 @@ export class App extends Component  {
 
     return (
       <Box m="0 auto">
-        <h1>Phonebook</h1>
-        <Section>
+        {/* ------Add Contacts------- */}
+        <h1>My PhoneBook</h1>
+        <Box display="flex" flexDirection="row" justifyContent="center">
+          <Section>
           <Form onSubmit={this.onSubmitForm} />
-        </Section>
-        <Section title="Contacts">
-          {this.state.contacts.length ? (
-            <Box
-                display="flex"
-                flexDirection="column"
-                gridGap="10px"
-            >
-            <Filter
-                onChange={this.onChangeFilter}  
-                value={filter}
-              />
-              <ContactList
-                contacts={visibleContacts}
-                onDelete={this.deleteContact}
-              />
-            </Box>
-          ) : (<p>There are no contacts.</p>
-          )}
-        </Section>
+          </Section>
+        {/* ------My Contacts------- */}
+          <Section title="Contacts">
+            {this.state.contacts.length ? (
+              <Box
+                  display="flex"
+                  flexDirection="column"
+                  gridGap="10px"
+              >
+                {/* ------Filter------- */}
+              <Filter
+                  onChange={this.onChangeFilter}  
+                  value={filter}
+                />
+                {/* ------Contact List------- */}
+                <ContactList
+                  contacts={visibleContacts}
+                  onDelete={this.deleteContact}
+                />
+              </Box>
+            ) : (<p>There are no contacts.</p>
+            )}
+          </Section>
+        </Box>
         <GlobalStyle />
       </Box>
     )
