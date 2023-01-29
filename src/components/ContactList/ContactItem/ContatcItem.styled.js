@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const ContactItemStyle = styled.div`
+export const ItemWrap = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
 `;
 
-export const ItemInfo = styled.div`
+export const ItemContact = styled.div`
     display: inline-block;
     margin-right: 8px;
     font-size: 20px;
