@@ -14,7 +14,7 @@ export class Form extends Component {
     nameInputId = nanoid();
     numberInputId = nanoid(); 
 
-    onSubmitHandler = (value, { resetForm }) => {
+    handleSubmit = (value, { resetForm }) => {
         this.props.onSubmit({ ...value, id: nanoid() });
         resetForm();
     }
@@ -32,7 +32,7 @@ export class Form extends Component {
             <Formik
                 initialValues={this.state}
                 validationSchema={this.schema}
-                onSubmit={this.onSubmitHandler}>
+                onSubmit={this.handleSubmit}>
                 <StyledForm autoComplete="off">
                     <label htmlFor={this.numberInputId}>
                         <span>Name</span><br/>
