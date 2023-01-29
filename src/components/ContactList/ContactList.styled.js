@@ -6,10 +6,10 @@ export const List = styled.ul`
     padding: 15px;
 `
 export const ListItem = styled.li`
-border-radius: ${p => p.theme.radii.sm };
-border: 1px solid rgb(154 154 154);
-padding: 8px;
-&:not(:last-child){
-    margin-bottom: 15px;
+    border-radius: ${p => p.theme.radii.sm };
+    border: 1px solid rgb(154 154 154);
+    padding: 8px;
+    &:not(:last-child){
+        margin-bottom: 15px;
 }
 `
