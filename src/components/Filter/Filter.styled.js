@@ -8,6 +8,8 @@ export const Form = styled.form`
     margin: 0 auto 15px;
     max-width: 600px;
     color: ${p => p.theme.colors.text };
+    background: ${p => p.theme.colors.background };
+    padding: 15px;
 `;
 
 export const Label = styled.label`
@@ -18,7 +20,9 @@ export const Input = styled.input`
     font-size: 30px;
     border: 1px solid rgb(105 116 202);
     border-radius: ${p => p.theme.radii.sm };
-    color: ${p => p.theme.colors.text }
+    color: ${p => p.theme.colors.text };
+    background: #edefff;
+    padding: 5px;
 `;
 
 export const Span = styled.span`

@@ -58,23 +58,24 @@ export class App extends Component  {
             <Form onSubmit={this.onSubmitForm} />
             </Section>
         {/* ------My Contacts------- */}
-            <Section title="Contacts">
+            <Section title="Find Name">
               {this.state.contacts.length ? (
                 <Box
                   display="flex"
                   flexDirection="column"
-                  p="15px"
                 >
                   {/* ------Filter------- */}
                 <Filter
                     onChange={this.onChangeFilter}  
                     value={filter}
                   />
-                  {/* ------Contact List------- */}
+                {/* ------Contact List------- */}
+                <Section title="Contacts">
                   <ContactList
                     contacts={visibleContacts}
                     onDelete={this.deleteContact}
                   />
+                </Section>
                 </Box>
               ) : (<p>There are no contacts.</p>
               )}

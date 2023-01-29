@@ -1,11 +1,10 @@
-// import PropTypes from 'prop-types';
-// import { Box } from '../utils/Box';
+import PropTypes from 'prop-types';
 import { ContactItem  } from './ContactItem/ContactItem';
-
+import { ContactListStyle } from './ContactList.styled';
 
 export const ContactList = ({ contacts, onDelete }) => {
     return (
-        <ul>
+        <ContactListStyle>
             {contacts.map(({ id, name, number }) => (
                 <li key={id}>
                     <ContactItem
@@ -16,6 +15,15 @@ export const ContactList = ({ contacts, onDelete }) => {
                     />
                 </li>
             ))}
-        </ul>
+        </ContactListStyle>
     );
 };
+
+ContactList.propTypes = {
+    contacts: PropTypes.exact({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        number: PropTypes.string.isRequired,
+    }).isRequired,
+    onClickDelete: PropTypes.func.isRequired,
+}.isRequired;
