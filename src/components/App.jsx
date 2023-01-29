@@ -18,7 +18,7 @@ export class App extends Component  {
     filter: '',
   };
 
-  onSubmitForm = data => {
+  addContact = data => {
     const { contacts } = this.state;
     const normalizedName = data.name.toLowerCase();
     
@@ -56,7 +56,7 @@ export class App extends Component  {
           justifyContent="center"
           gridGap={5}>
             <Section>
-            <Form onSubmit={this.onSubmitForm} />
+            <Form onSubmit={this.addContact} />
             </Section>
         {/* ------My Contacts------- */}
             <Section>
