@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
 export const ContactItemStyle = styled.div`
-    background: #f7f5ff;
-    padding: 15px;
     display: flex;
     justify-content: space-between;
-    border-radius: ${p => p.theme.radii.sm };
+    /* margin-bottom: 15px; */
 `;
 
 export const ItemInfo = styled.div`
