@@ -74,7 +74,7 @@ export class App extends Component  {
                 <Section title="Contacts">
                   <ContactList
                     contacts={visibleContacts}
-                    onDelete={this.deleteContact}
+                    onDeleteContact={this.deleteContact}
                   />
                 </Section>
                 </Box>

@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { ContactWrapper } from './ContatcItem.styled';
 
-export const Contact = ({ name, number, id, onClickDelete }) => {
+export const Contact = ({ name, number, onDelete }) => {
     return (
         <ContactWrapper>
             {name}: {number}
-            <button type="button" onClick={() => onClickDelete(id)}>Delete</button>
+            <button type="button" onClick={onDelete}>Delete</button>
         </ContactWrapper>
     );
 };
