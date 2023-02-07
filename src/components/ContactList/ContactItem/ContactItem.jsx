@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ContactWrapper } from './ContatcItem.styled';
+import { ContactWrapper } from './ContactItem.styled';
 
 export const Contact = ({ name, number, onDelete }) => {
     return (

@@ -8,6 +8,7 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "box": "^0.0.4",
+    "cspell": "^6.22.0",
     "formik": "^2.2.9",
     "modern-normalize": "^1.1.0",
     "nanoid": "^4.0.0",
